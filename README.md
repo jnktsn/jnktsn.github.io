@@ -1,1 +1,0 @@
-# jnktsn.github.io
