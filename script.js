@@ -16,6 +16,7 @@ function printCard() {
   output.innerHTML = `
     <div class="card">
       <h1 class="card-name">${cardIndex.name}</h1>
+      <img src="tarot_placeholder.png">
       <p class="card-interpretation">${cardIndex.interpretation}</p>
     </div>
   `;
