@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: url("fonts/CinzelDecorative-Regular.ttf");
+    /* Add additional src lines for other font formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Cinzel Decorative", cursive;
+    /* Use the desired mystical or occult-looking font */
+    background-color: #222;
+    color: white;
+}
+
+.card {
+    text-align: center;
+}
+
+.card-name {
+    font-size: 32px;
+}
+
+.card-interpretation {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-family: "Cinzel Decorative", cursive;
+    background-color: #222;
+    color: white;
+  }
+  
+  .container button {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
