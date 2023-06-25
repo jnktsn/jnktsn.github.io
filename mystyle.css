@@ -1,0 +1,15 @@
+.wide-input {
+    width: 300px;
+}
+
+#invisibleElement {
+    display: none;
+}
+
+#choice {
+    color: #bc1212;
+}
+
+#visited {
+    display: none;
+}
