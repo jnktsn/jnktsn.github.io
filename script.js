@@ -42,7 +42,7 @@ function submitDirection() {
     if (regex.test(inputValue)) {
 
         //pass current room and next direction into function
-        result = nextRoom(roomIndex, inputValue);
+        result = nextRoom(roomIndex, inputValue.toLowerCase());
 
         var flavor = `
         <div>
