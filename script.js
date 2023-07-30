@@ -115,6 +115,10 @@ function updateBar(e, filled) {
             newElementWidth = 100;
         }
 
+        if (newElementWidth < 0) {
+            newElementWidth = 5;
+        }
+
         element.style.width = newElementWidth + '%';
     }
 
