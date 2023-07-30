@@ -32,3 +32,8 @@ input {
 .label {
     width: 100%;
 }
+
+#reset {
+    width: 80%;
+    height: 80%;
+}
