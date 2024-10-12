@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amoeba Shape Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- SVG Container -->
+    <svg id="amoeba">
+        <!-- Path for the Amoeba Shape -->
+        <path id="amoeba-path" stroke="#333" stroke-width="2"/>
+    </svg>
+
+    <!-- Controls -->
+    <div class="controls">
+        <!-- Sliders for Control -->
+        <div class="sliders">
+            <!-- Top -->
+            <div class="slider-container">
+                <label for="top-slider">Top</label>
+                <input type="range" id="top-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Top-Right -->
+            <div class="slider-container">
+                <label for="top-right-slider">Top-Right</label>
+                <input type="range" id="top-right-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Right -->
+            <div class="slider-container">
+                <label for="right-slider">Right</label>
+                <input type="range" id="right-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Bottom-Right -->
+            <div class="slider-container">
+                <label for="bottom-right-slider">Bottom-Right</label>
+                <input type="range" id="bottom-right-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Bottom -->
+            <div class="slider-container">
+                <label for="bottom-slider">Bottom</label>
+                <input type="range" id="bottom-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Bottom-Left -->
+            <div class="slider-container">
+                <label for="bottom-left-slider">Bottom-Left</label>
+                <input type="range" id="bottom-left-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Left -->
+            <div class="slider-container">
+                <label for="left-slider">Left</label>
+                <input type="range" id="left-slider" min="-200" max="200" value="0">
+            </div>
+            <!-- Top-Left -->
+            <div class="slider-container">
+                <label for="top-left-slider">Top-Left</label>
+                <input type="range" id="top-left-slider" min="-200" max="200" value="0">
+            </div>
+
+            <!-- Color Picker for Amoeba Body -->
+            <div class="slider-container">
+                <label for="fill-color-picker">Amoeba Body Color</label>
+                <input type="color" id="fill-color-picker" value=#ce93d8>
+            </div>
+
+            <!-- Stroke Width Slider -->
+            <div class="slider-container">
+                <label for="stroke-width-slider">Border Width</label>
+                <input type="range" id="stroke-width-slider" min="0" max="10" value="2">
+            </div>
+
+            <!-- Stroke Color Picker -->
+            <div class="slider-container">
+                <label for="stroke-color-picker">Border Color</label>
+                <input type="color" id="stroke-color-picker" value="#333333">
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="randomize-button">Randomize</button>
+            <button id="download-button">Download SVG</button>
+        </div>
+    </div>
+
+     <!-- Background Video -->
+     <video autoplay muted loop class="video-bg">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="script.js"></script>
+</body>
+</html>
