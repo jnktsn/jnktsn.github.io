@@ -1,0 +1,271 @@
+/* styles.css */
+
+body {
+    display: grid;
+    grid-template-columns: 20% 60% 20%; /* Two columns: one for the SVG, one for controls */
+    grid-template-rows: auto auto auto auto; /* Two rows: one for the site name and one for the sliders */
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    height: 100vh;
+    font-family: 'Lato', sans-serif; /* Example using Lato */
+    background-image: url("backdrop_lighter.svg");
+    background-size: contain;
+}
+
+.site_name {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    width: 100%;      /* Ensures the div takes the full width of the cell */
+    height: auto;     /* Allows the height to adjust automatically */
+    display: flex;    /* Flexbox for centering */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+.site_name img {
+    max-width: 50%;   /* Ensures the image never exceeds the width of the div */
+    height: auto;      /* Maintains the aspect ratio */
+    max-height: 100vh; /* Ensures it doesn't overflow the viewport height */
+}
+
+
+
+#radio {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    width: 40vw;
+    height: 40vw;
+    display: grid; /* Ensures the SVG can align properly */
+    place-items: center; /* Horizontally and vertically center child elements */
+    text-align: center;
+    background-image: url("radio-blank-wide.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Make the container a reference point for child elements */
+}
+
+svg {
+    width: 30vw; /* 25% of viewport width */
+    height: 30vw; /* Maintain aspect ratio */
+    border-radius: 30%;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    border: 1px solid rgba(31, 43, 39, 0.5);
+    margin-bottom: 5vw;
+}
+
+
+#amoeba-path {
+    /*fill: rgba(201, 231, 32); /* Semi-transparent fill */
+    /*stroke: #333;
+    stroke-width: 1;*/
+}
+
+
+#sliders-1 {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    display: grid; /* Ensures the SVG can align properly */
+    place-items: center; /* Horizontally and vertically center child elements */
+    text-align: center;
+    position: relative; /* Make the container a reference point for child elements */ 
+    border-radius: 12%;
+    background: rgba(244, 124, 124, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    border: 1px solid rgba(31, 43, 39, 0.5);
+    margin-left: 5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#sliders-2 {
+    grid-column: 3;
+    grid-row: 2 / 4;
+    display: grid; /* Ensures the SVG can align properly */
+    place-items: center; /* Horizontally and vertically center child elements */
+    text-align: center;
+    position: relative; /* Make the container a reference point for child elements */ 
+    border-radius: 12%;
+    background: rgba(244, 124, 124, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    border: 1px solid rgba(31, 43, 39, 0.5);
+    margin-right: 5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#sliders-2:hover, #sliders-1:hover {
+
+    background: rgba(244, 124, 124);
+}
+
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: relative;  /* Ensure it is on top of other elements */
+    z-index: 200;  /* A higher z-index to bring it to the front */
+}
+
+.sliders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slider-container {
+    margin: 10px 15px;
+    text-align: center;
+}
+
+/* Updated Slider Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 8px;
+    background: #555; /* Dark background to match the theme */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #E2B227; /* Bright color for the thumb */
+    border: 1px solid rgba(31, 43, 39, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(226, 178, 39, 0.7); /* Glow effect to make the thumb stand out */
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    width: 30px;
+    height: 30px;
+    background: #E2B227; /* Brighter color on hover */
+    box-shadow: 0 0 15px rgba(226, 178, 39, 1); /* Stronger glow on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #E2B227;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(226, 178, 39, 0.7);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #E2B227;
+    box-shadow: 0 0 15px rgba(226, 178, 39, 1);
+}
+
+/* Updated Button Styling */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    width: 100%; /* Make the buttons container take full width of the controls */
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-family: "Luckiest Guy", cursive;
+    font-family: "Tilt Neon", serif;
+    font-size: clamp(16px, 1.2vw, 32px); /* Min 16px, preferred 2vw, max 32px */
+    cursor: pointer;
+    background-color: #1a1a1a; /* Dark button background */
+    color: #fff; /* White text for contrast */
+    border: 2px solid #E2B227; /* Border to match slider thumb */
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #333; /* Slightly lighter on hover */
+    box-shadow: 0 0 15px rgba(226, 178, 39, 0.7); /* Glow effect matching the slider */
+}
+
+#fill-color-picker:hover, #stroke-color-picker:hover {
+    box-shadow: 0 0 15px rgba(226, 178, 39, 0.7);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 300;
+    font-size: clamp(16px, 1.2vw, 32px); /* Min 16px, preferred 2vw, max 32px */
+    color: #070707; /* Changed label color for contrast */
+    
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        grid-template-columns: auto auto; /* Single column layout for mobile */
+        grid-template-rows: auto auto auto auto; /* Simplify row layout */
+        height: auto; /* Adjust height to content size */
+    }
+
+    #radio {
+        grid-column: span 2;
+        width: 80vw; /* Make the radio larger on mobile */
+        height: 80vw;
+    }
+
+    svg {
+        width: 70vw; /* Adjust SVG size for mobile */
+        height: 70vw;
+    }
+
+    .site_name {
+        grid-column: span 2;
+    }
+
+    .site_name img {
+        max-width: 80%; /* Increase image width for mobile */
+    }
+
+    #sliders-1 {
+        grid-column: 1; /* Place sliders below the main content */
+        grid-row: 4;
+        margin: 20px 0;
+        width: 90%; /* Ensure sliders fit within mobile width */
+    }
+
+    #sliders-2 {
+        grid-column: 2; /* Place sliders below the main content */
+        grid-row: 4;
+        margin: 20px 0;
+        width: 90%; /* Ensure sliders fit within mobile width */
+    }
+
+    
+
+    button {
+        width: 60%;
+        margin: 10px 0; /* Space buttons out vertically */
+    }
+
+}
